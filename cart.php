@@ -2,17 +2,14 @@
     session_start();
     require_once('dataset.php');
     
-   
     $_SESSION['totalAmount'] = 0;
 
     if(isset($_POST['btnUpdate'])) {
-        
         
         $cartKeys = $_POST['hdnKey'];
         $cartSize = $_POST['hdnSize'];
         $cartQuantities = $_POST['txtQuantity'];
 
-        
         if(isset($cartKeys) && isset($cartSize) && isset($cartQuantities)) {
           
 
@@ -65,7 +62,7 @@
                             <tr>
                                 <th scope="col-1"> </th>
                                 <th scope="col-3">Product</th>
-                                <th scope="col-1">Size</th>
+                                <th scope="col-1">Storage</th>
                                 <th scope="col-2">Quantity</th>
                                 <th scope="col-2">Price</th>
                                 <th scope="col-2">Total</th>
@@ -75,15 +72,12 @@
                         <tbody>
                             
                           
-
                             <?php if(isset($_SESSION['cartItems'])): ?>
                                 <?php foreach($_SESSION['cartItems'] as $key => $value): ?>
                                     <?php foreach($value as $size => $quantity): ?>
 
-                                        
                                         <?php $_SESSION['totalAmount'] += $arrProducts[$key]['price'] * $quantity; ?>                                        
                                         
-                                     
                                         <tr>                                        
                                             <td><img src="img/<?php echo $arrProducts[$key]['photo1']; ?>" class="img-thumbnail" style="height: 50px;"></td>
                                             <td><?php echo $arrProducts[$key]['name']; ?></td>
@@ -97,7 +91,6 @@
                                             <td>₱ <?php echo number_format($arrProducts[$key]['price'], 2); ?></td>
                                             <td>₱ <?php echo number_format($arrProducts[$key]['price'] * $quantity, 2); ?></td>
                                             
-                                           
                                             <td><a href="remove-confirm.php?<?php echo 'k=' . $key . '&s=' . $size . '&q=' . $quantity; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
                                         </tr>
                                     <?php endforeach; ?>

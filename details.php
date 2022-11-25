@@ -65,29 +65,16 @@
                         <p><?php echo $arrProducts[$_GET['k']]['description']; ?></p>                    
                         <hr>
                         <input type="hidden" name="hdnKey" value="<?php echo $_GET['k']; ?>">
-                        <h3 class="title">Select Size:</h3>
-                        <input type="radio" name="radSize" id="radXS" value="7">
-                        <label for="radXS" class="pr-3">US 7</label>
-                        <input type="radio" name="radSize" id="radSM" value="7.5">
-                        <label for="radSM" class="pr-3">US 7.5</label>
-                        <input type="radio" name="radSize" id="radMD" value="8">
-                        <label for="radMD" class="pr-3">US 8</label>
-                        <input type="radio" name="radSize" id="radLG" value="8.5">
-                        <label for="radLG" class="pr-3">US 8.5</label>
-                        <input type="radio" name="radSize" id="radXL" value="9">
-                        <label for="radXL" class="pr-3">US 9</label> 
-                        <input type="radio" name="radSize" id="radXL" value="9.5">
-                        <label for="radXL" class="pr-3">US 9.5</label> 
-                        <input type="radio" name="radSize" id="radXL" value="10">
-                        <label for="radXL" class="pr-3">US 10</label>
-                        <input type="radio" name="radSize" id="radXL" value="10.5">
-                        <label for="radXL" class="pr-3">US 10.5</label>       
-                        <input type="radio" name="radSize" id="radXL" value="11">
-                        <label for="radXL" class="pr-3">US 11</label> <br>
-                        <input type="radio" name="radSize" id="radXL" value="11.5">
-                        <label for="radXL" class="pr-3">US 11.5</label>     
-                        <input type="radio" name="radSize" id="radXL" value="12">
-                        <label for="radXL" class="pr-3">US 12</label>          
+                        <h3 class="title">Select Storage:</h3>
+                        <input type="radio" name="radSize" id="radXS" value="128">
+                        <label for="radXS" class="pr-3">128GB</label>
+                        <input type="radio" name="radSize" id="radSM" value="256">
+                        <label for="radSM" class="pr-3">256GB</label>
+                        <input type="radio" name="radSize" id="radMD" value="512">
+                        <label for="radMD" class="pr-3">512GB</label>
+                        <input type="radio" name="radSize" id="radLG" value="1028">
+                        <label for="radLG" class="pr-3">1TB</label>
+        
                         <hr>
                         <h3 class="title">Enter Quantity:</h3>
                         <input type="number" name="txtQuantity" id="txtQuantity" class="form-control" placeholder="0" min="1" max="100" required>
